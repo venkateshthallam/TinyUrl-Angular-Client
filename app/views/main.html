@@ -1,0 +1,27 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<div class="jumbotron">
+  <h3>Hello! Want a Tiny Tiny URL? I got you! &#9786;</h3>
+</div>
+
+<div ng-app="tinyUrlApp" ng-controller="MainCtrl">
+<div class="row marketing" style="margin-bottom:400px;">
+  
+  <div class="row">
+  <div class="col-md-10">
+    <input style="height:50px;width:569px;" required ng-model="inputUrl" id="url" type="text" placeholder="Enter your URL to Make it Tiny"></input></div>
+ <div class="col-md-2" style="margin-top:10px;margin-bottom:20px;">
+ <button style="background-color:orange;" id="tinybutton" type="button" ng-disabled="enableSubmit" class="btn btn-default" ng-click="shortenUrl()">Tiny This</button>
+ </div>
+ <div style="margin-left:20px;"class="g-recaptcha" data-sitekey="6LdvICYUAAAAAImTCGzN3SbpyqdQIJmyXtpdMkhn" data-callback="enableSubmitButton"></div>
+ <p style="margin-top:70px;margin-left:20px;font-size:10px;">(This check, so that my $5 DO instance doesn't get spammed)</p>
+ </div>
+<div style="margin-top: 80px" ng-show="isUrlShortened">
+   <div class="row">
+    <div class="col-sm-4"> <h5>Shortened URL Value is </h5> </div>
+    <div class="col-sm-4" style="margin-top:10px;"> <a  target="_blank" href="{{ tinyUrlValue }}">{{ tinyUrlValue }}</a> </div>
+   </div>
+</div>
+</div>
+
+</div>
