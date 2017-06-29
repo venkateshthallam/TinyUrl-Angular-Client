@@ -1,12 +1,2 @@
-# tiny-url
-
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
-
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+# Tiny URL Angular Client
+This is a simple angular page which takes a URL and calls the backend to convert it and display. It also Google ReCaptcha integrated.
